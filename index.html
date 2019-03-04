@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Halo, World</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="Bey">
+            <div data-key="66">Press B to hear her magic</div>
+        </div>
+
+        <div class="keys">
+            <div data-key="65" class="key">
+                <kbd>A</kbd>
+                <span class="sound">funk</span>
+            </div>
+            <div data-key="83" class="key">
+                <kbd>S</kbd>
+                <span class="sound">indian tabla</span>
+            </div>
+            <div data-key="68" class="key">
+                <kbd>D</kbd>
+                <span class="sound">samba</span>
+            </div>
+            <div data-key="70" class="key">
+                <kbd>F</kbd>
+                <span class="sound">reggae</span>
+            </div>
+            <div data-key="71" class="key">
+                <kbd>G</kbd>
+                <span class="sound">flamenco</span>
+            </div>
+            <div data-key="72" class="key">
+                <kbd>H</kbd>
+                <span class="sound">hard rock</span>
+            </div>
+            <div data-key="74" class="key">
+                <kbd>J</kbd>
+                <span class="sound">african waltz</span>
+            </div>
+            <div data-key="75" class="key">
+                <kbd>K</kbd>
+                <span class="sound">samai</span>
+            </div>
+        </div>
+
+        <audio volume="0.1" data-key="66" src="sounds/Beyonce.mp3"></audio>
+        <audio volume="0.4" data-key="65" src="sounds/Funk.mp3"></audio>
+        <audio volume="0.4" data-key="83" src="sounds/Indian tabla.mp3"></audio>
+        <audio volume="0.4" data-key="68" src="sounds/Batucada.mp3"></audio>
+        <audio volume="0.4" data-key="70" src="sounds/Reggae.mp3"></audio>
+        <audio volume="0.4" data-key="71" src="sounds/Flamenco.mp3"></audio>
+        <audio volume="0.4" data-key="72" src="sounds/Hard Rock.mp3"></audio>
+        <audio
+            volume="0.4"
+            data-key="74"
+            src="sounds/African Waltz.mp3"
+        ></audio>
+        <audio volume="0.4" data-key="75" src="sounds/Samai.mp3"></audio>
+
+        <script>
+            let playing = false;
+            window.addEventListener("keydown", function(e) {
+                const audio = document.querySelector(
+                    `audio[data-key="${e.keyCode}"]`
+                );
+                if (audio) {
+                    audio.currentTime = 0;
+                    playing = !playing;
+                    if (playing) {
+                        audio.play();
+                        return;
+                    }
+                    audio.pause();
+                    return;
+                }
+            });
+
+            // Stop only Beyonce
+            // let playing = false;
+            // window.addEventListener("keydown", function(e) {
+            //     const audio = document.querySelector(
+            //         `audio[data-key="${e.keyCode}"]`
+            //     );
+            //     if (audio) {
+            //         audio.currentTime = 0;
+            //         if (e.keyCode == "66") {
+            //             playing = !playing;
+            //             if (playing) {
+            //                 audio.play();
+            //                 return;
+            //             }
+            //             audio.pause();
+            //             return;
+            //         }
+            //         audio.play();
+            //     }
+            // });
+        </script>
+    </body>
+</html>
