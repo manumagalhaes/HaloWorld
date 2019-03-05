@@ -1,63 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="UTF-8" />
         <title>Halo, World</title>
         <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     </head>
+    
     <body>
-        <div class="Bey">
-            <div data-key="66">Press B to hear her magic</div>
+        <div class = "title"><h1>Halo World</h1><br>
+            <h2>Make a global diva sing world rythms</h2></div>
+        <div id ="container">
+        <div class="halo">
+            <div data-key="72"><kbd>Press H</kbd><br>to hear her magic</div>
+            - <input data-key="72" id="72" type="range" min="0" max="100" step="1" oninput="SetVolume(this)"
+                onchange="SetVolume(this)"></input> +
         </div>
+        
 
         <div class="keys">
-            <div data-key="65" class="key">
-                <kbd>A</kbd>
+            <div class = "rythmBox"><div data-key="70" class="key">
+                <kbd>F</kbd>
                 <span class="sound">funk</span>
             </div>
-            <div data-key="83" class="key">
-                <kbd>S</kbd>
-                <span class="sound">indian tabla</span>
-            </div>
-            <div data-key="68" class="key">
-                <kbd>D</kbd>
-                <span class="sound">samba</span>
-            </div>
-            <div data-key="70" class="key">
-                <kbd>F</kbd>
-                <span class="sound">reggae</span>
-            </div>
-            <div data-key="71" class="key">
-                <kbd>G</kbd>
-                <span class="sound">flamenco</span>
-            </div>
-            <div data-key="72" class="key">
-                <kbd>H</kbd>
-                <span class="sound">hard rock</span>
-            </div>
-            <div data-key="74" class="key">
-                <kbd>J</kbd>
-                <span class="sound">african waltz</span>
-            </div>
-            <div data-key="75" class="key">
-                <kbd>K</kbd>
-                <span class="sound">samai</span>
-            </div>
+            <input data-key="70" id="70" type="range" min="0" max="100" step="1" oninput="SetVolume(this)"
+                onchange="SetVolume(this)"></input>
         </div>
 
-        <audio volume="0.1" data-key="66" src="sounds/Beyonce.mp3"></audio>
-        <audio volume="0.4" data-key="65" src="sounds/Funk.mp3"></audio>
-        <audio volume="0.4" data-key="83" src="sounds/Indian tabla.mp3"></audio>
-        <audio volume="0.4" data-key="68" src="sounds/Batucada.mp3"></audio>
-        <audio volume="0.4" data-key="70" src="sounds/Reggae.mp3"></audio>
-        <audio volume="0.4" data-key="71" src="sounds/Flamenco.mp3"></audio>
-        <audio volume="0.4" data-key="72" src="sounds/Hard Rock.mp3"></audio>
-        <audio
-            volume="0.4"
-            data-key="74"
-            src="sounds/African Waltz.mp3"
-        ></audio>
-        <audio volume="0.4" data-key="75" src="sounds/Samai.mp3"></audio>
+
+        <div class="rythmBox">
+            <div data-key="73" class="key">
+                <kbd>I</kbd>
+                <span class="sound">indian tabla</span>
+                </div>
+            <input data-key="73" id="73" type="range" min="0" max="100" step="1" oninput="SetVolume(this)"
+                    onchange="SetVolume(this)"></input>
+            
+        </div>
+
+        <div class = "rythmBox">
+            <div data-key="66" class="key">
+                <kbd>B</kbd>
+                <span class="sound">batucada</span>
+                </div>
+            <input data-key="66" id="66" type="range" min="0" max="100" step="1" oninput="SetVolume(this)"
+                    onchange="SetVolume(this)"></input>
+        </div>
+
+        <div class="rythmBox">
+            <div data-key="71" class="key">
+                <kbd>G</kbd>
+                <span class="sound">reggae</span>
+                </div>
+            <input data-key="71" id="71" type="range" min="0" max="100" step="1" oninput="SetVolume(this)"
+                    onchange="SetVolume(this)"></input>
+            
+        </div>
+
+        <div class="rythmBox">
+            <div data-key="67" class="key">
+                <kbd>C</kbd>
+                <span class="sound">flamenco</span>
+                </div>
+                <input data-key="67" id="67" type="range" min="0" max="100" step="1" oninput="SetVolume(this)"
+                    onchange="SetVolume(this)"></input>
+            
+        </div>
+
+        <div class="rythmBox">
+            <div data-key="82" class="key">
+                <kbd>R</kbd>
+                <span class="sound">hard rock</span>
+                </div>
+                <input data-key="82" id="82" type="range" min="0" max="100" step="1" oninput="SetVolume(this)"
+                    onchange="SetVolume(this)"></input>
+            
+        </div>
+
+        <div class="rythmBox">
+            <div data-key="65" class="key">
+                <kbd>A</kbd>
+                <span class="sound">african waltz</span>
+                </div>
+                <input data-key="65" id="65" type="range" min="0" max="100" step="1" oninput="SetVolume(this)"
+                    onchange="SetVolume(this)"></input>
+            
+        </div>
+
+        <div class="rythmBox">
+            <div data-key="83" class="key">
+                <kbd>S</kbd>
+                <span class="sound">samai</span>
+                </div>
+                <input data-key="83" id="83" type="range" min="0" max="100" step="1" oninput="SetVolume(this)"
+                    onchange="SetVolume(this)"></input>
+            
+                </div>
+        </div>
+        </div>
+
+        <audio data-key="72" src="sounds/Beyonce_trimmed.mp3"></audio>
+        <audio data-key="70" src="sounds/Funk_trimmed.mp3"></audio>
+        <audio data-key="73" src="sounds/Indian tabla.mp3"></audio>
+        <audio data-key="66" src="sounds/Batucada.mp3"></audio>
+        <audio data-key="71" src="sounds/Reggae.mp3"></audio>
+        <audio data-key="67" src="sounds/Flamenco.mp3"></audio>
+        <audio data-key="82" src="sounds/Hard Rock.mp3"></audio>
+        <audio data-key="65" src="sounds/African Waltz.mp3"></audio>
+        <audio data-key="83" src="sounds/Samai.mp3"></audio>
 
         <script>
             let playing = false;
@@ -77,7 +127,7 @@
                 }
             });
 
-            // Stop only Beyonce
+            // Stop only Beyonce's track
             // let playing = false;
             // window.addEventListener("keydown", function(e) {
             //     const audio = document.querySelector(
@@ -97,6 +147,12 @@
             //         audio.play();
             //     }
             // });
+        
+        function SetVolume(val) {
+                var audio = document.querySelector(`audio[data-key="${val.id}"]`);
+                var volume = val.value / 100;
+                audio.volume = volume
+                console.log(audio.volume)}
         </script>
     </body>
 </html>
