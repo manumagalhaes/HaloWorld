@@ -41,7 +41,7 @@
         <div class = "rythmBox">
             <div data-key="66" class="key">
                 <kbd>B</kbd>
-                <span class="sound">batucada</span>
+                <span class="sound">samba</span>
                 </div>
             <input data-key="66" id="66" type="range" min="0" max="100" step="1" oninput="SetVolume(this)"
                     onchange="SetVolume(this)"></input>
@@ -110,12 +110,16 @@
         <audio data-key="83" src="sounds/Samai.mp3"></audio>
 
         <script>
-                  
+                
              var playing = [false, false, false, false, false, false, false, false, false];
              window.addEventListener("keydown", function(e) {
                  const audio = document.querySelector(
                      `audio[data-key="${e.keyCode}"]`
                  );
+                 const key = document.querySelector(
+                    `.key[data-key="${e.keyCode}"]`
+                 );
+
                  if (audio) {
                      audio.currentTime = 0;
                      if (e.keyCode == "65") {
@@ -123,90 +127,111 @@
                         playing[0] = !playing[0];
                          if (playing[0]=== true) {
                              audio.play();
+                             key.classList.add("playing");
                              return;
                          } 
                          audio.pause();
+                         key.classList.remove("playing");
                          return;
                      } else if (e.keyCode == "72") {
                          console.log(e.keyCode);
                          playing[1] = !playing[1];
                          if (playing[1] === true) {
                              audio.play();
+                             document.body.style.background = "url('img/beyCP.jpg') bottom center";
+                             document.body.style.backgroundSize = "cover";
                              return;
                          }
                          audio.pause();
+                         document.body.style.background = "url('img/beyBW.jpg') bottom center";
+                         document.body.style.backgroundSize = "cover";
                          return;
                      } else if (e.keyCode == "70") {
                          console.log(e.keyCode);
                          playing[2] = !playing[2];
                          if (playing[2] === true) {
                              audio.play();
+                             key.classList.add("playing");
                              return;
                          }
                          audio.pause();
+                         key.classList.remove("playing");
                          return;
                      } else if (e.keyCode == "73") {
                          console.log(e.keyCode);
                          playing[3] = !playing[3];
                          if (playing[3] === true) {
                              audio.play();
+                             key.classList.add("playing");
                              return;
                          }
                          audio.pause();
+                         key.classList.remove("playing");
                          return;
                      } else if (e.keyCode == "71") {
                          console.log(e.keyCode);
                          playing[4] = !playing[4];
                          if (playing[4] === true) {
                              audio.play();
+                             key.classList.add("playing");
                              return;
                          }
                          audio.pause();
+                         key.classList.remove("playing");
                          return;
                      } else if (e.keyCode == "66") {
                          console.log(e.keyCode);
                          playing[5] = !playing[5];
                          if (playing[5] === true) {
                              audio.play();
+                             key.classList.add("playing");
                              return;
                          }
                          audio.pause();
+                         key.classList.remove("playing");
                          return;
                      } else if (e.keyCode == "67") {
                          console.log(e.keyCode);
                          playing[6] = !playing[6];
                          if (playing[6] === true) {
                              audio.play();
+                             key.classList.add("playing");
                              return;
                          }
                          audio.pause();
+                         key.classList.remove("playing");
                          return;
                      } else if (e.keyCode == "82") {
                          console.log(e.keyCode);
                          playing[7] = !playing[7];
                          if (playing[7] === true) {
                              audio.play();
+                             key.classList.add("playing");
                              return;
                          }
                          audio.pause();
+                         key.classList.remove("playing");
                          return;
                      } else if (e.keyCode == "83") {
                          console.log(e.keyCode);
                          playing[8] = !playing[8];
                          if (playing[8] === true) {
                              audio.play();
+                             key.classList.add("playing");
                              return;
                          }
                          audio.pause();
+                         key.classList.remove("playing");
                          return;
                      }
              }});
+
         
         function SetVolume(val) {
                 var audio = document.querySelector(`audio[data-key="${val.id}"]`);
                 var volume = val.value / 100;
                 audio.volume = volume
-                console.log(audio.volume)}
+                console.log(audio.volume)};
         </script>
     </body>
 </html>

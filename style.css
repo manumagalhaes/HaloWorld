@@ -1,8 +1,9 @@
 html {
     font-size: 10px;
-    background: url(https://wallpapercave.com/wp/WAhkFmb.jpg) bottom center;
+    background: url("img/beyBW.jpg") bottom center;
     background-size: cover;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -19,6 +20,7 @@ body {
     font-family: "Roboto", sans-serif;
     align-self: flex-start;
 }
+
 h1 {
     font-size: 40px;
     margin: 0;
@@ -33,6 +35,7 @@ h2 {
     color: white;
     font-family: "Open Sans", sans-serif;
 }
+
 #container {
     margin: 0;
     padding: 0;
@@ -47,7 +50,6 @@ input[type="range"] {
 input {
     width: 5vw;
     height: 2vh;
-
     cursor: pointer;
     box-shadow: 5% 5% 5% #000000;
     background: none;
@@ -67,23 +69,6 @@ input[type="range"]::-webkit-slider-thumb {
     margin-top: -3px;
 }
 
-.halo {
-    border: 0.4rem solid black;
-    border-radius: 0.5rem;
-    font-size: 12pt;
-    padding: 1rem 0.5rem;
-    transition: all 0.07s ease;
-    width: 20%;
-    margin: auto;
-    text-align: center;
-    color: #ffc600;
-    background: rgba(0, 0, 0, 0.4);
-    text-shadow: 0 0 0.5rem black;
-    display: block;
-    text-transform: uppercase;
-    align-self: center;
-}
-
 .keys {
     display: flex;
     flex: 1;
@@ -100,7 +85,7 @@ input[type="range"]::-webkit-slider-thumb {
     margin: 1rem;
     font-size: 1.5rem;
     padding: 1rem 0.5rem;
-    transition: all 0.07s ease;
+    transition: all 0.09s ease;
     width: 10rem;
     height: 90px;
     text-align: center;
@@ -119,6 +104,23 @@ input[type="range"]::-webkit-slider-thumb {
     transform: scale(1.1);
     border-color: #ffc600;
     box-shadow: 0 0 1rem #ffc600;
+}
+
+.halo {
+    border: 0.4rem solid black;
+    border-radius: 0.5rem;
+    font-size: 12pt;
+    padding: 1rem 0.5rem;
+    transition: all 0.07s ease;
+    width: 20%;
+    margin: auto;
+    text-align: center;
+    color: #ffc600;
+    background: rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 0.5rem black;
+    display: block;
+    text-transform: uppercase;
+    align-self: center;
 }
 
 kbd {
